@@ -1,7 +1,7 @@
 var button = document.querySelector("button");
-var numbersBox = document.querySelector("numbersBox");
-var fiveNumbersBox = document.querySelector("fiveNumbersBox");
-var twoNumbersBox = document.querySelector("twoNumbersBox");
+var numbersBox = document.querySelector(".numbersBox");
+var fiveNumbersBox = document.querySelector(".fiveNumbersBox");
+var oneNumbersBox = document.querySelector(".oneNumbersBox");
 
 
 
@@ -10,32 +10,37 @@ function randomFive() {
 	var firstFive = []
 	
 	for (var i = 0; i <= 4; i++ ) {
-	firstFive.push(Math.floor(Math.random() * 69))
+		firstFive.push(Math.floor(Math.random() * 69))
 	}
-	return ("Your numbers are: " + firstFive);
+	return ("Numbers: " + firstFive);
 	}
 
-function randomTwo(){
-	var lastTwo = [];
-	for (var i = 0; i <= 1; i++ ); {
-	lastTwo.push(Math.floor(Math.random() * 26))
+
+function randomOne(){
+	var last = [];
+	for (var i = 0; i <= 0; i++ ); {
+		last.push(Math.floor(Math.random() * 26))
 	}
-	return ("Your numbers are: " + lastTwo);
+	return ("Powerball: " + last);
 }
 
-function randomDraw(){
-	randomFive();
-	randomTwo();
+function randomDraw(fun, fun2){
+	var five = fun();
+	var one = fun2();
+	fiveNumbersBox.textContent = five;
+	oneNumbersBox.textContent = one;
+
+	
 }
 
 
 function generate(thebutton){
 	thebutton.addEventListener("click", function(event){
 	event.preventDefault();
-	randomDraw();
-		
+	randomDraw(randomFive, randomOne);
+
 	})
 }
 
 
-
+generate(button)

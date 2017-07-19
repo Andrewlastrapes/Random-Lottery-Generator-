@@ -4,7 +4,7 @@
 
 
 .header {
-	align-content: : center;
+	text-align: center;
 }
 
 
@@ -18,13 +18,13 @@
 
 .fiveNumbersBox {
 	text-align: center;
-	border: 2px solid red;
+	
 
 }
 
-.twoNumbersBox {
+.oneNumbersBox {
 	text-align: center;
-	border: 2px solid red;
+	
 }
 
 
