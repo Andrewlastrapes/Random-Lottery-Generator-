@@ -12,7 +12,7 @@ function randomFive() {
 	for (var i = 0; i <= 4; i++ ) {
 		firstFive.push(Math.floor(Math.random() * 69))
 	}
-	return ("Numbers: " + firstFive);
+	return ("Numbers: " + firstFive.join(" "));
 	}
 
 
