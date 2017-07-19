@@ -4,16 +4,31 @@
 
 
 .header {
-	justify-content: center;
+	align-content: : center;
 }
 
 
 
 .numbers {
-	
+	padding-top: 15%
+
 }
 
 
-.numbersBox {
 
+.fiveNumbersBox {
+	text-align: center;
+	border: 2px solid red;
+
+}
+
+.twoNumbersBox {
+	text-align: center;
+	border: 2px solid red;
+}
+
+
+.button {
+	text-align: center;
+	padding-top: 15%
 }
